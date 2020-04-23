@@ -1,4 +1,4 @@
-from bert import QA
+from reader import QA
 model = QA('/content/data/trainning')
 
 
@@ -6,6 +6,6 @@ doc = "anh Vinh sinh năm 1998, sở hữu khối tài sản 350 tỷ USD. Quê 
 
 q = 'ai sinh năm 1998 ?'
 
-answers = model.predict(q,doc)
+answer = model.predict(doc,q)
 
-print(answers)
+print(answer['answer'])
