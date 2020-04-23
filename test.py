@@ -1,4 +1,4 @@
-from reader import QA
+from bert import QA
 model = QA('/content/data/trainning')
 
 
