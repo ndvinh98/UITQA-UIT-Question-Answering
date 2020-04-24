@@ -10,7 +10,7 @@ from pytorch_transformers.tokenization_bert import (BasicTokenizer,
 from torch.utils.data import DataLoader, SequentialSampler, TensorDataset
 
 from pytorch_transformers import (WEIGHTS_NAME, BertConfig,
-                                  BertForQuestionAnswering, BertTokenizer, DistilBertConfig, DistilBertForQuestionAnswering, DistilBertTokenizer)
+                                  BertForQuestionAnswering, BertTokenizer)
 
 
 class SquadExample(object):
@@ -113,7 +113,7 @@ def input_to_squad_example(passage, question):
         orig_answer_text=orig_answer_text,
         start_position=start_position,
         end_position=end_position)
-                
+
     return example
 
 def _check_is_max_context(doc_spans, cur_span_index, position):
@@ -409,11 +409,11 @@ def get_answer(example, features, all_results, n_best_size,
     example_index_to_features = collections.defaultdict(list)
     for feature in features:
         example_index_to_features[feature.example_index].append(feature)
-    
+
     unique_id_to_result = {}
     for result in all_results:
         unique_id_to_result[result.unique_id] = result
-    
+
     _PrelimPrediction = collections.namedtuple( "PrelimPrediction",["feature_index", "start_index", "end_index", "start_logit", "end_logit"])
 
     example_index = 0
@@ -507,7 +507,7 @@ def get_answer(example, features, all_results, n_best_size,
         total_scores.append(entry.start_logit + entry.end_logit)
 
     probs = _compute_softmax(total_scores)
-    
+
     answer = {"answer" : nbest[0].text,
                "start" : nbest[0].start_index,
                "end" : nbest[0].end_index,
@@ -525,14 +525,14 @@ RawResult = collections.namedtuple("RawResult",
 
 class QA:
 
-    def __init__(self,model_path: str, model_name: str):
+    def __init__(self,model_path: str):
         self.max_seq_length = 384
         self.doc_stride = 128
         self.do_lower_case = True
         self.max_query_length = 64
         self.n_best_size = 20
         self.max_answer_length = 30
-        self.model, self.tokenizer = self.load_model(model_path,model_name)
+        self.model, self.tokenizer = self.load_model(model_path)
         if torch.cuda.is_available():
             self.device = 'cuda'
         else:
@@ -541,19 +541,12 @@ class QA:
         self.model.eval()
 
 
-    def load_model(self,model_path: str,model_name: str,do_lower_case=False):
-        if model_name=='bert':
-          config = BertConfig.from_pretrained(model_path + "/config.json")
-          tokenizer = BertTokenizer.from_pretrained(model_path, do_lower_case=do_lower_case)
-          model = BertForQuestionAnswering.from_pretrained(model_path, from_tf=False, config=config)
-        elif model_name=='distilbert':
-          config = DistilBertConfig.from_pretrained(model_path + "/config.json")
-          tokenizer = DistilBertTokenizer.from_pretrained(model_path, do_lower_case=do_lower_case)
-          model = DistilBertForQuestionAnswering.from_pretrained(model_path, from_tf=False, config=config)
-        else:
-          print('cant load model !!! please enter name of model and path to model corectly !!!')
+    def load_model(self,model_path: str,do_lower_case=False):
+        config = BertConfig.from_pretrained(model_path + "/config.json")
+        tokenizer = BertTokenizer.from_pretrained(model_path, do_lower_case=do_lower_case)
+        model = BertForQuestionAnswering.from_pretrained(model_path, from_tf=False, config=config)
         return model, tokenizer
-    
+
     def predict(self,passage :str,question :str):
         example = input_to_squad_example(passage,question)
         features = squad_examples_to_features(example,self.tokenizer,self.max_seq_length,self.doc_stride,self.max_query_length)
