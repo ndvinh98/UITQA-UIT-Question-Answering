@@ -1,0 +1,1 @@
+﻿Điểm trung bình tích lũy toàn khóa (ĐTBTLTK) là điểm tính theo kết quả của các học phần đạt từ điểm 5,0 trở lên mà sinh viên đã đăng ký học tại Trường (kể cả các học phần có điểm bảo lưu). ĐTBTLTK được tính khi sinh viên đủ điều kiện tốt nghiệp, được dùng để phân loại kết quả học tập và xếp hạng tốt nghiệp.

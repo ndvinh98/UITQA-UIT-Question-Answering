@@ -1,0 +1,1 @@
+﻿Điểm trung bình học kỳ (ĐTBHK) là điểm trung bình có trọng số của các môn học mà sinh viên đăng ký học và được Trường xếp lớp trong học kỳ đó, với trọng số là số tín chỉ của mỗi môn học tương ứng. ĐTBHK được dùng để xét học bổng, khen thưởng, xử lý học vụ sau mỗi học kỳ. Kết quả học tập của học kỳ hè (nếu có) được tính chung vào học kỳ liền kề trước đó

@@ -2,3 +2,5 @@ torch==1.4.0
 pytorch-transformers==1.0.0
 underthesea
 whoosh
+Flask
+Flask-WTF

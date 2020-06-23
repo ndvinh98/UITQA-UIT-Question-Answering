@@ -1,0 +1,5 @@
+- Mục đích việc đánh giá kết quả rèn luyện của SV nhằm đưa ra được những định hướng, nội dung rèn luyện cụ thể, phù hợp, tạo điều kiện cho SV có môi trường rèn luyện.
+- Sử dụng kết quả rèn luyện
++ Kết quả rèn luyện được lưu và dùng để xét khen thưởng, các học bổng khuyến khích học tập của Trường, doanh nghiệp, tổ chức và cáchọc bổng khác cho SV.
++ Kết quả phân loại rèn luyện toàn khoá học của từng SV được sử dụng để xếp loại tốt nghiệp, được lưu trong hồ sơ quản lý SV của trường và ghi vào bảng điểm kết quả học tập và rèn luyện của SV khi ra trường.
+- SV bị xếp loại rèn luyện kém trong 1 học kỳ thì phải tạm ngừng học ở một học kỳ tiếp theo và nếu bị xếp loại rèn luyện kém cả năm lần thứ hai thì sẽ bị buộc thôi học.

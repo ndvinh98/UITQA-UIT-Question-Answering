@@ -1,0 +1,1 @@
+﻿Trong quá trình học tập, sinh viên có thể đề nghị Trường cấp bảng điểm. Để thực hiện công việc này sinh viên phải đăng ký và nộp lệ phí theo quy định của Trường. Sau khi tốt nghiệp, sinh viên được cấp một bảng điểm kèm theo bằng tốt nghiệp.

@@ -1,0 +1,1 @@
+﻿Điểm ĐTBHK, ĐTBTLTK và ĐTBCTL được tính theo công thức sau: tổng của tất cả tích giữa điểm môn học và số tín chỉ tương ứng của môn học đó chia cho tổng số tín chỉ của tất cả các môn học. Điểm được làm tròn đến 0,01.
