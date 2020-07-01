@@ -6,5 +6,5 @@
 
 
 
-[UITHelper_QAS] : https://github.com/namnv1113/UITHelper_QAS#general
-[Vietnamese question answering with BERT] : https://github.com/mailong25/bert-vietnamese-question-answering
+[UITHelper_QAS]: https://github.com/namnv1113/UITHelper_QAS#general
+[Vietnamese question answering with BERT]: https://github.com/mailong25/bert-vietnamese-question-answering
