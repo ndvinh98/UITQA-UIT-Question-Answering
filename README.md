@@ -16,13 +16,12 @@ This project is referenced from [UITHelper_QAS][1] and [Vietnamese question answ
 
 
 # Train with custom data on BERT question answering
-<li>Your dataset must be in SQUADv1.1-like format.
-
-<li>The training and testing data include: Vietnamese question-answer pairs from Wikipedia (same as SQuAD) and Vietnamese question-answer pairs from UIT regulation documents.
+The training and testing data include: Vietnamese question-answer pairs from Wikipedia and Vietnamese question-answer pairs from UIT regulation documents which must be in [SQUADv1.1-like format][5]. You can find it [here][4]
   
-<li>Your dataset must be in SQUADv1.1 format.
+  
 
 <li>Follow my steps in google_colab/Fine_Tunning_BERT.ipynb
+
 
 
 <li>Please note that change the path to your train set and test set
@@ -35,5 +34,7 @@ This project is referenced from [UITHelper_QAS][1] and [Vietnamese question answ
 
 [3]: https://drive.google.com/drive/folders/1MdY-TdDVFdhXQSHU3lPU6oPV3Ndv776V?usp=sharing
 
+[4]: https://github.com/namnv1113/UITHelper_QAS/tree/master/Dataset
 
+[5]: https://rajpurkar.github.io/SQuAD-explorer/
 
