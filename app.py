@@ -44,7 +44,7 @@ def index():
     query = form.data['search']
     if query != '':
         start = time.time()
-        results=IR_QA(query=query,data=data,model=model,tf_idf_vetor=vect,top_n_matching=4)
+        results=IR_QA(query=query,data=data,model=model,tf_idf_vetor=vect,top_n_matching=1)
         end = time.time()
         time_processing=round((end - start),2)
         if results:
