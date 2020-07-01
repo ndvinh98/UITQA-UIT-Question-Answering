@@ -31,6 +31,8 @@ The training and testing data include: Vietnamese question-answer pairs from Wik
 <img src="sa.png" ><br>
 
 # For example
+<img src="ex.png" ><br>
+
 
 [1]: https://github.com/namnv1113/UITHelper_QAS#general
 
