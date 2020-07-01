@@ -1,4 +1,4 @@
-# UITQA-Vietnamese-Question-Answering
+# UITQA-UIT-Question-Answering
 
 A system with a search engine for relevant document retrieval (TF-IDF) and a deep learning model (BERT), applied to answer questions related to regulations of University of Information Technology (UIT)
 
@@ -26,6 +26,11 @@ The training and testing data include: Vietnamese question-answer pairs from Wik
 
 <li>Please note that change the path to your train set and test set
 
+
+# System architecture
+<img src="sa.png" ><br>
+
+# For example
 
 [1]: https://github.com/namnv1113/UITHelper_QAS#general
 
